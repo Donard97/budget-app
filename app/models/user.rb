@@ -5,7 +5,7 @@ class User < ApplicationRecord
 
   has_many :groups
   has_many :payments
-  
+
   validates :name, :email, presence: true, length: { maximum: 255 }
   validates :email, uniqueness: true
 
