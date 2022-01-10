@@ -8,4 +8,10 @@ class User < ApplicationRecord
   
   validates :name, :email, presence: true, length: { maximum: 255 }
   validates :email, uniqueness: true
+
+  private
+
+  def set_role
+    update(role: 'user')
+  end
 end
