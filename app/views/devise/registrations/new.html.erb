@@ -3,7 +3,7 @@
   <div class="header d-flex justify-content-between align-items-end">  
     <div class="m-2">
       <%= link_to root_path do %>
-	      <span class="text-light">Back</span>
+      <span class="text-light">Back</span>
       <% end %>
       </div>
       <div>
@@ -13,9 +13,14 @@
         <%= f.submit "Sign up", class: "log-btn" %>
       </div>
   </div>
+
 <div class="signup mt-3">
   <div class="field m-1">
     <%= f.text_field :name, class: "form-control", placeholder: "Full name" %>
+  </div>
+
+    <div class="field">
+    <%= f.text_field :surname %>
   </div>
 
   <div class="field m-1">
