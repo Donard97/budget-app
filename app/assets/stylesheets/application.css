@@ -45,3 +45,8 @@ a {
   border: none;
   color: white;
 }
+
+svg {
+  width: 23px;
+  height: 24px;
+}
