@@ -34,6 +34,11 @@ a {
 
 /* Header style */
 
+.navbar {
+  background-color: #3778c2;
+  color: white;
+}
+
 .header {
   color: white;
   background-color: #3778c2;
@@ -49,4 +54,27 @@ a {
 svg {
   width: 23px;
   height: 24px;
+}
+
+/* Footer style */
+
+.footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: #5fb523;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.footer-btn {
+  border: 2px solid white;
+  padding: 5px;
+  margin: 0 5px;
+}
+
+.footer-btn a {
+  color: white;
+  font-size: 19px;
 }
