@@ -7,9 +7,9 @@ class GroupsController < ApplicationController
     @group = Group.new
   end
 
-  # def show
-  #   @payments = @group.payments.order(created_at: 'desc')
-  # end
+  def show
+    @payments = @group.payments.order(created_at: 'desc')
+  end
 
   def create
     @group = current_user.groups.new(group_params)
@@ -27,7 +27,7 @@ class GroupsController < ApplicationController
     @group= Group.find(params[:id])
     @group.destroy
     respond_to do |format|
-      format.html { redirect_to group_url, notice: 'Category was successfully destroyed.' }
+      format.html { redirect_to groups_url, notice: 'Category was successfully destroyed.' }
     end
   end
 
