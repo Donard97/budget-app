@@ -7,14 +7,16 @@ class GroupsController < ApplicationController
     end
   end
 
-  def show; end
-
   def new
     @group = Group.new
   end
 
+  def show
+    @payments = @group.payments.order(created_at: 'desc')
+  end
+
   def create
-    @group = current_user.groups.new(food_params)
+    @group = current_user.groups.new(group_params)
 
     respond_to do |format|
       if @group.save
@@ -38,7 +40,7 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
   end
 
-  def food_params
-    params.require(:food).permit(:name, :measurement_unit, :price)
+  def group_params
+    params.require(:group).permit(:name, :icon)
   end
 end

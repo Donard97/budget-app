@@ -1,2 +1,23 @@
-<%= render 'navbar' %>
-<%= render 'footer' %>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark d-flex justify-content-between">
+    <div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+
+    <div>
+      <h5>CATEGORIES</h5>
+    </div>
+
+    <div>
+      <%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "p-2 m-1 text-light" %>  </div>
+    </div>
+  </nav>
+<header>
+
+<footer class="footer">
+  <div class="footer-btn w-100 text-center">
+    <%= link_to "Add a new category", new_group_path %>  </div>
+  <div>
+</footer>

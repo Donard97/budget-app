@@ -1,0 +1,10 @@
+<div>
+  <%= form_with(model: @group) do |form| %>
+    <div class="m-2">
+      <%= form.text_field :name, autofocus: true, placeholder: "Name", class: "form-control", required: true %>
+    </div>
+    <div class="m-2">
+      <%= form.url_field :icon, placeholder: "Icon", class: "form-control", required: true %>
+    </div>
+  <% end %>
+</div>
