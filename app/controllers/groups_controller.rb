@@ -1,26 +1,22 @@
 class GroupsController < ApplicationController
   def index
-    if user_signed_in?
-      @group = current_user.groups
-    else
-      redirect_to user_session_path
-    end
+    @groups = current_user.groups.order(:name)
   end
 
   def new
     @group = Group.new
   end
 
-  def show
-    @payments = @group.payments.order(created_at: 'desc')
-  end
+  # def show
+  #   @payments = @group.payments.order(created_at: 'desc')
+  # end
 
   def create
     @group = current_user.groups.new(group_params)
 
     respond_to do |format|
       if @group.save
-        format.html { redirect_to groups_url, notice: 'Category was successfully created.' }
+        format.html { redirect_to root_path, notice: 'Category was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -28,16 +24,17 @@ class GroupsController < ApplicationController
   end
 
   def destroy
-    @group.delete
+    @group= Group.find(params[:id])
+    @group.destroy
     respond_to do |format|
-      format.html { redirect_to groups_url, notice: 'Category was successfully destroyed.' }
+      format.html { redirect_to group_url, notice: 'Category was successfully destroyed.' }
     end
   end
 
   private
 
   def set_group
-    @group = Group.find(params[:id])
+    @group = Group.includes(:payments).find(params[:id])
   end
 
   def group_params

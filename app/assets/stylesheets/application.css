@@ -18,6 +18,10 @@ body {
   background-color: whitesmoke;
 }
 
+li {
+  list-style-type: none;
+}
+
 /* Splash screen style */
 .title {
   padding: 224px 0;
@@ -29,6 +33,7 @@ body {
 a {
   text-decoration: none;
   color: #434b54;
+  font-weight: 600;
 }
 
 /* Header style */
@@ -59,7 +64,6 @@ svg {
 .footer {
   position: absolute;
   width: 100%;
-  bottom: 0;
   background-color: #5fb523;
   height: 60px;
   display: flex;
@@ -75,4 +79,23 @@ svg {
 .footer-btn a {
   color: white;
   font-size: 19px;
+}
+
+/* Category style */
+
+.category-div {
+  border: 1px solid white;
+  background-color: white;
+  width: 100%;
+}
+
+.category-img {
+  width: 130px;
+}
+
+.cd-btn {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  margin-right: 10px;
 }

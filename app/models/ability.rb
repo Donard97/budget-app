@@ -5,6 +5,6 @@ class Ability
     return unless user.present?
 
     can :manage, Payment, author: user
-    can :manage, Category, user: user
+    can :manage, Group, user: user
   end
 end
