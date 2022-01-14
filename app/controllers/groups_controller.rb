@@ -7,9 +7,9 @@ class GroupsController < ApplicationController
     @group = Group.new
   end
 
-  def show
-    @payments = @group.payments.order(created_at: 'desc')
-  end
+  # def show
+  #   @payments = @group.payments.order(created_at: 'desc')
+  # end
 
   def create
     @group = current_user.groups.new(group_params)
