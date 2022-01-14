@@ -15,7 +15,7 @@ class PaymentsController < ApplicationController
 
     respond_to do |format|
       if @payment.save
-        format.html { redirect_to @payment.group.first, notice: 'Payment was successfully created.' }
+        format.html { redirect_to @payment.groups.first, notice: 'Payment was successfully created.' }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
@@ -23,6 +23,6 @@ class PaymentsController < ApplicationController
   end
 
   def payment_params
-    params.require(:payment).permit(:name, :amount, group_id: [])
+    params.require(:payment).permit(:name, :amount, group_ids: [])
   end
 end

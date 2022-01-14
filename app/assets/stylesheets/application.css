@@ -68,6 +68,7 @@ svg {
   height: 60px;
   display: flex;
   align-items: center;
+  z-index: 999;
 }
 
 .footer-btn {

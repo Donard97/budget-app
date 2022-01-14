@@ -1,0 +1,9 @@
+<div class="container m-4">
+	<div>
+		<div class="d-flex justify-content-between">
+			<h5><%= payment.name %></h5>
+			<small>$<%= payment.amount.round(2) %></small>
+		</div>
+		<small><%= payment.created_at.strftime("%d %b %Y") %></small>
+	</div>
+</div>
