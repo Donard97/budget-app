@@ -2,6 +2,12 @@
 
 The Budget Planner App is going to be helpful to track your expenses and transactions.
 
+![sc1](https://user-images.githubusercontent.com/74506933/149639286-839f044f-4c48-4fed-a3ac-b04cc1bfa04f.PNG)
+
+![sc2](https://user-images.githubusercontent.com/74506933/149639289-c25ce8c6-4c24-42c4-b463-052813ebbdee.PNG)
+
+
+
 ## Built With
 
 - Ruby
@@ -13,7 +19,7 @@ The Budget Planner App is going to be helpful to track your expenses and transac
 
 ## Presentation
 
-[Video link]()
+[Video link](https://glacial-everglades-00365.herokuapp.com/)
 
 # Getting Started
 
