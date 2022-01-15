@@ -22,6 +22,13 @@ class PaymentsController < ApplicationController
     end
   end
 
+  def destroy
+    @payment = Payment.find(params[:id])
+    @payment.destroy
+    flash[:success] = "Payment was successfully deleted."
+    redirect_to root_path
+  end
+
   def payment_params
     params.require(:payment).permit(:name, :amount, group_ids: [])
   end

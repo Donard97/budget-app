@@ -1,7 +1,8 @@
 <div>
   <%= form_with(model: @group) do |form| %>
     <header>
-      <nav class="navbar navbar-expand-lg navbar-dark d-flex justify-content-between">
+      <nav class="header navbar navbar-expand-lg navbar-dark d-flex justify-content-between">
+      <div class="container">
         <div>
           <%= link_to root_path do %>
             <span class="text-light">
@@ -12,19 +13,22 @@
           <% end %>
         </div>
 
-        <div>
+        <div class="customized-h5">
           <h5>Add a new category </h5>
         </div>
         <div>
-          <%= form.submit "Save", class: "button save has-text-white" %>
+          <%= form.submit "Save", class: "save-btn" %>
+        </div>
         </div>
       </nav>
-    <header>
+    </header>
+    <div class="container">
     <div class="m-2">
       <%= form.text_field :name, autofocus: true, placeholder: "Name", class: "form-control", required: true %>
     </div>
     <div class="m-2">
       <%= form.url_field :icon, placeholder: "Icon", class: "form-control", required: true %>
     </div>
+  </div>
   <% end %>
 </div>

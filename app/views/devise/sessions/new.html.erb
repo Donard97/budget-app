@@ -1,5 +1,6 @@
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="header d-flex justify-content-between align-items-end">
+  <div class="container d-flex justify-content-between align-items-end">
       <div class="m-2">
       <%= link_to root_path do %>
 	      <span class="text-light">
@@ -10,13 +11,14 @@
       <% end %>
       </div>
       <div>
-        <h3>LOGIN</h3>
+        <h5>LOGIN</h5>
       </div>
       <div class="actions m-2">
         <%= f.submit "Log in", class: "log-btn" %>
       </div>
+      </div>
   </div>
-  <div class="log mt-3">
+  <div class="container log mt-3">
   <div class="field m-1">
     <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "Email", class: "form-control" %>
   </div>
