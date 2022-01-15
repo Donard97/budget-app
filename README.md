@@ -21,7 +21,7 @@ To get a local copy up and running follow these simple steps.
 
 - You can clone this repo by typing `git clone git@github.com:Donard97/budget-app.git` on your terminal.
 
-- Type `cd recipe-app` to access the project on the terminal.
+- Type `cd budget-app` to access the project on the terminal.
   
 - Run `bundle install` to install all the required dependancies.
 
