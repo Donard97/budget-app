@@ -59,6 +59,7 @@ gem 'better_errors', '~> 2.9', '>= 2.9.1'
 gem 'bootstrap', '~> 5.1.3'
 
 group :development, :test do
+  gem 'rspec-rails', '~> 5.0.0'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
 end
