@@ -15,11 +15,11 @@ The Budget Planner App is going to be helpful to track your expenses and transac
 
 ## Live Demo
 
-[Live Demo link]()
+[Live Demo link](https://glacial-everglades-00365.herokuapp.com/)
 
 ## Presentation
 
-[Video link](https://glacial-everglades-00365.herokuapp.com/)
+[Video link]()
 
 # Getting Started
 
