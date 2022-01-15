@@ -58,6 +58,7 @@ gem 'better_errors', '~> 2.9', '>= 2.9.1'
 
 gem 'bootstrap', '~> 5.1.3'
 
+gem 'database_cleaner'
 
 group :development, :test do
   gem 'rspec-rails', '~> 5.0.0'
