@@ -1,0 +1,34 @@
+<div>
+  <%= form_with(model: @group) do |form| %>
+    <header>
+      <nav class="header navbar navbar-expand-lg navbar-dark d-flex justify-content-between">
+      <div class="container">
+        <div>
+          <%= link_to root_path do %>
+            <span class="text-light">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+              </svg>
+            </span>
+          <% end %>
+        </div>
+
+        <div class="customized-h5">
+          <h5>Add a new category </h5>
+        </div>
+        <div>
+          <%= form.submit "Save", class: "save-btn" %>
+        </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+    <div class="m-2">
+      <%= form.text_field :name, autofocus: true, placeholder: "Name", class: "form-control", required: true %>
+    </div>
+    <div class="m-2">
+      <%= form.url_field :icon, placeholder: "Icon", class: "form-control", required: true %>
+    </div>
+  </div>
+  <% end %>
+</div>

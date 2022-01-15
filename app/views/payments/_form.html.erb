@@ -1,0 +1,29 @@
+<div class="has-background-color is-flex flex-grow-1 flex-direction-column">
+  <%= form_with(model: payment) do |form| %>
+    <div class="header">
+    <div class="container d-flex justify-content-between align-items-end">
+      <div class="m-2">
+      <%= link_to root_path do %>
+	      <span class="text-light">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"/>
+          </svg>
+        </span>
+      <% end %>
+      </div>
+      <div>
+        <h5>Add new transaction</h5>
+      </div>
+    <div>
+      <%= form.submit "Save", class: "save-btn" %>
+    </div>
+  </div>
+  </div>
+    <%= render "devise/shared/error_messages", resource: payment %>
+    <div class="container">
+      <%= form.text_field :name, autofocus: true, placeholder: "Name", class: "form-control m-2", required: true %>
+      <%= form.number_field :amount, placeholder: "Amount", class: "form-control  m-2", required: true %>
+      <%= form.collection_select :group_ids, current_user.groups.order(:name), :id, :name, {}, { class: "form-select  m-2", multiple: true, required: true } %>
+    </div>
+  <% end %>
+</div>
