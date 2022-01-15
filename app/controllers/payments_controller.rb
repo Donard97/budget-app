@@ -25,7 +25,7 @@ class PaymentsController < ApplicationController
   def destroy
     @payment = Payment.find(params[:id])
     @payment.destroy
-    flash[:success] = "Payment was successfully deleted."
+    flash[:success] = 'Payment was successfully deleted.'
     redirect_to root_path
   end
 

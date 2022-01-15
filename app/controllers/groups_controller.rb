@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   load_and_authorize_resource
-  
+
   def index
     @groups = current_user.groups.order(:name)
   end
@@ -27,7 +27,7 @@ class GroupsController < ApplicationController
   end
 
   def destroy
-    @group= Group.find(params[:id])
+    @group = Group.find(params[:id])
     @group.destroy
     respond_to do |format|
       format.html { redirect_to groups_url, notice: 'Category was successfully destroyed.' }
