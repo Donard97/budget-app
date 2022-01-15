@@ -27,7 +27,6 @@ RSpec.describe Group, type: :model do
     expect(@group.icon).to eq('Home')
   end
 
-
   it 'should have payments' do
     @group.payments
     expect(@group.payments).to eq([@payment])
